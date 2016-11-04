@@ -15,3 +15,5 @@
 #
 
 add_lunch_combo aosp_flo-userdebug
+add_lunch_combo maru_flo-userdebug
+add_lunch_combo maru_flo-user

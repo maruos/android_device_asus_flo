@@ -1,5 +1,4 @@
 #
-# Copyright 2012 The Android Open Source Project
 # Copyright 2015-2016 Preetam J. D'Souza
 # Copyright 2016 The Maru OS Project
 #
@@ -15,9 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+LOCAL_PATH := $(call my-dir)
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_flo.mk \
-    $(LOCAL_DIR)/full_flo.mk
-PRODUCT_MAKEFILES += \
-    $(LOCAL_DIR)/maru_flo.mk
+# need TimeService.apk on hammerhead to keep persistent RTC time offsets
+# it's missing from the Nexus binary zips...
+include $(CLEAR_VARS)
+LOCAL_MODULE := TimeService
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+
+include $(BUILD_PREBUILT)

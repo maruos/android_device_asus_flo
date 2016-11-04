@@ -1,5 +1,7 @@
 #
 # Copyright (C) 2011 The Android Open-Source Project
+# Copyright (C) 2015-2016 Preetam J. D'Souza
+# Copyright (C) 2016 The Maru OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -67,15 +69,10 @@ TARGET_USES_OVERLAY := true
 TARGET_USES_SF_BYPASS := true
 TARGET_USES_C2D_COMPOSITON := true
 
-# Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
-WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
+# Disable preopt until desktop rootfs size is optimized
+#ifeq ($(TARGET_BUILD_VARIANT),user)
+#  WITH_DEXPREOPT := true
+#endif
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 23068672 # 22M
