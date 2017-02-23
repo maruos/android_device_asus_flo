@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 $(call inherit-product, device/asus/flo/full_flo.mk)
-$(call inherit-product, vendor/asus/flo/flo-vendor.mk)
+$(call inherit-product, vendor/asus/flo/device-vendor.mk)
 $(call inherit-product, vendor/maruos/device-maru.mk)
 $(call inherit-product, vendor/maruos/BoardConfigVendor.mk)
 
