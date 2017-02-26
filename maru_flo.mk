@@ -20,7 +20,7 @@ $(call inherit-product, vendor/maruos/device-maru.mk)
 $(call inherit-product, vendor/maruos/BoardConfigVendor.mk)
 
 PRODUCT_NAME := maru_flo
-PRODUCT_MODEL := Maru on the Nexus 7 (2013)
+PRODUCT_MODEL := Maru on the Nexus 7 2013 (Beta)
 
 # allow /vendor/maruos files
 PRODUCT_RESTRICT_VENDOR_FILES := false
