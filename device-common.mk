@@ -20,7 +20,7 @@
 # Everything in this directory will become public
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := kernel/flo/arch/arm/boot/zImage
+LOCAL_KERNEL := out/target/product/flo/obj/KERNEL_OBJ/arch/arm/boot/zImage
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
