@@ -18,7 +18,7 @@
 LOCAL_PATH := $(call my-dir)
 
 # include kernel build rules
-include kernel/hammerhead/AndroidKernel.mk
+include kernel/flo/AndroidKernel.mk
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 TARGET_PREBUILT_KERNEL := device/asus/flo-kernel/kernel
